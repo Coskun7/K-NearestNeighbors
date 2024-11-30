@@ -44,7 +44,7 @@ prediction = knn.predict(x_test)
 knn.score(x_test,y_test)
 
 J_hist=[]
-for i in range(1,16):
+for i in range(1,15):
     knn = KNeighborsClassifier(n_neighbors=i)
     knn.fit(x_train,y_train)
     J_hist.append(knn.score(x_test,y_test))
